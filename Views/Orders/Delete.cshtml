@@ -28,7 +28,7 @@
                     <strong>Order Date:</strong> @Model.OrderDate.ToString("M/d/yyyy")
                 </div>
                 <div class="col-md-4">
-                    <strong>Total Amount:</strong> @Model.TotalAmount.ToString("C")
+                    <strong>Total Amount:</strong> @Model.TotalAmount.ToString("C", new System.Globalization.CultureInfo("en-PH"))
                 </div>
             </div>
         </div>
@@ -56,8 +56,8 @@
                             <tr>
                                 <td>@orderLine.Product.Name</td>
                                 <td>@orderLine.Quantity</td>
-                                <td>@orderLine.UnitPrice.ToString("C")</td>
-                                <td>@orderLine.LineTotal.ToString("C")</td>
+                                <td>@orderLine.UnitPrice.ToString("C", new System.Globalization.CultureInfo("en-PH"))</td>
+                                <td>@orderLine.LineTotal.ToString("C", new System.Globalization.CultureInfo("en-PH"))</td>
                                 <td>
                                     <span class="badge bg-success">+@orderLine.Quantity</span>
                                 </td>

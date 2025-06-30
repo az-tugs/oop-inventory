@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="mt-3">
-                    <strong>Total Amount: ₱<span id="totalAmount">@Model.TotalAmount.ToString("F2")</span></strong>
+                    <strong>Total Amount: <span id="totalAmount">@Model.TotalAmount.ToString("C", new System.Globalization.CultureInfo("en-PH"))</span></strong>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                     @foreach (var product in Model.AvailableProducts)
                     {
                         <option value="@product.Id" data-price="@product.UnitPrice" data-stock="@product.AvailableQuantity">
-                            @product.Name - $@product.UnitPrice.ToString("F2") (Stock: @product.AvailableQuantity)
+                            @product.Name - @product.UnitPrice.ToString("C", new System.Globalization.CultureInfo("en-PH")) (Stock: @product.AvailableQuantity)
                         </option>
                     }
                 </select>

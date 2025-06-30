@@ -78,7 +78,7 @@
                     @foreach (var product in Model.AvailableProducts)
                     {
                         <option value="@product.Id" data-price="@product.UnitPrice" data-stock="@product.AvailableQuantity">
-                            @product.Name - $@product.UnitPrice.ToString("F2") (Stock: @product.AvailableQuantity)
+                            @product.Name - ₱@product.UnitPrice.ToString("F2") (Stock: @product.AvailableQuantity)
                         </option>
                     }
                 </select>
