@@ -12,8 +12,7 @@ using System.Threading.Tasks;
 
 namespace SchoolSuppliesInventory.Controllers
 {
-    [Authorize(Roles = "Admin, User")]
-    public class OrdersController : Controller
+    public class OrdersController : BaseController
     {
         private readonly ApplicationDbContext _context;
 

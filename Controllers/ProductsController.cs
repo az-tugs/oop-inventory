@@ -11,8 +11,7 @@ using SchoolSuppliesInventory.Entities;
 
 namespace SchoolSuppliesInventory.Controllers
 {
-    [Authorize(Roles = "Admin, User")]
-    public class ProductsController : Controller
+    public class ProductsController : BaseController
     {
         private readonly ApplicationDbContext _context;
 
